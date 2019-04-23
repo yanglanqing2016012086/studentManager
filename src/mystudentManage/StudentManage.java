@@ -58,7 +58,7 @@ public class StudentManage {
 	}
 	//添加类
 	public static void addstudent(ArrayList<Student> arry) {
-		//创建键盘录入对象
+		//录入对象
 		Scanner sc= new Scanner(System.in);
 		int stuId;
 		while(true) {
