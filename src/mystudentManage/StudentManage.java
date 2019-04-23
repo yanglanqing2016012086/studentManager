@@ -1,4 +1,4 @@
-ï»¿package mystudentManage;
+package mystudentManage;
  
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -7,62 +7,62 @@ public class StudentManage {
 	public static void app(String[] args) {
 		ArrayList<Student> arry = new ArrayList<>();
 		while(true) {
-			//è¿™æ˜¯æˆç»©ç®¡ç†ç³»ç»Ÿçš„ä¸»ç•Œé¢
-			System.out.println("------å­¦ç”Ÿç®¡ç†ç³»ç»Ÿ------");
-			System.out.println(" 1.æ’å…¥");
-			System.out.println(" 2.æŸ¥æ‰¾");
-			System.out.println(" 3.åˆ é™¤");
-			System.out.println(" 4.ä¿®æ”¹");
-			System.out.println(" 5.è¾“å‡º");
-			System.out.println(" 6.é€€å‡º");
+			//ÕâÊÇ³É¼¨¹ÜÀíÏµÍ³µÄÖ÷½çÃæ
+			System.out.println("------Ñ§Éú¹ÜÀíÏµÍ³------");
+			System.out.println(" 1.²åÈë");
+			System.out.println(" 2.²éÕÒ");
+			System.out.println(" 3.É¾³ı");
+			System.out.println(" 4.ĞŞ¸Ä");
+			System.out.println(" 5.Êä³ö");
+			System.out.println(" 6.ÍË³ö");
 			Scanner sc =new Scanner(System.in);
-			System.out.println("è¯·è¾“å…¥åºå·é€‰æ‹©ç›¸åº”çš„åŠŸèƒ½ï¼š");
+			System.out.println("ÇëÊäÈëĞòºÅÑ¡ÔñÏàÓ¦µÄ¹¦ÄÜ£º");
 			String stufunction = sc.nextLine();
 			switch (stufunction) {
 			case "1":
-				//æ’å…¥å­¦ç”Ÿ
+				//²åÈëÑ§Éú
 				addstudent(arry);
 				break;
 			case "2":
-				//æŸ¥æ‰¾å­¦ç”Ÿ
+				//²éÕÒÑ§Éú
 				findstudent(arry);
 				break;
 			case "3":
-				//åˆ é™¤å­¦ç”Ÿ
+				//É¾³ıÑ§Éú
 				deletestudent(arry);
 				break;
 			case "4":
-				//ä¿®æ”¹å­¦ç”Ÿ
+				//ĞŞ¸ÄÑ§Éú
 				changestudent(arry);
 				break;
 			case "5":
-				//è¾“å‡ºæ‰€æœ‰å­¦ç”Ÿ
+				//Êä³öËùÓĞÑ§Éú
 				printstudent(arry);
 				break;
 			case "6":
-				//é€€å‡º
+				//ÍË³ö
 			default:
-				System.out.println("è°¢è°¢ä½ çš„ä½¿ç”¨.");
-				System.exit(0);//é€€å‡ºJVM
+				System.out.println("Ğ»Ğ»ÄãµÄÊ¹ÓÃ.");
+				System.exit(0);//ÍË³öJVM
 				break;
 			}
 		}
 	}
-	//æŸ¥æ‰¾å­¦ç”Ÿç±»
+	//²éÕÒÑ§ÉúÀà
 	public static void findstudent(ArrayList<Student> arry) {
 		
 	}
-	//è¾“å‡ºæ‰€æœ‰ç±»
+	//Êä³öËùÓĞÀà
 	public static void printstudent(ArrayList<Student> arry) {
 		
 	}
-	//æ·»åŠ ç±»
+	//Ìí¼ÓÀà
 	public static void addstudent(ArrayList<Student> arry) {
-		//åˆ›å»ºé”®ç›˜å½•å…¥å¯¹è±¡
+		//´´½¨¼üÅÌÂ¼Èë¶ÔÏó
 		Scanner sc= new Scanner(System.in);
 		int stuId;
 		while(true) {
-			System.out.println("è¯·è¾“å…¥å­¦å·ï¼š");
+			System.out.println("ÇëÊäÈëÑ§ºÅ£º");
 			stuId = sc.nextInt();
 			boolean flag = false;
 			for(int i=0;i<arry.size();i++) {
@@ -73,35 +73,64 @@ public class StudentManage {
 				}
 			}
 			if(flag) {
-				System.out.println("æ‚¨è¾“å…¥çš„è´¦å·è¢«å ç”¨ï¼ï¼ï¼");
+				System.out.println("ÄúÊäÈëµÄÕËºÅ±»Õ¼ÓÃ£¡£¡£¡");
 			}else {
 				break;
 			}
 		}
-		System.out.println("è¯·è¾“å…¥å§“åï¼š");
+		System.out.println("ÇëÊäÈëĞÕÃû£º");
 		String name1 = sc.nextLine();
 		String name = sc.nextLine();
-		System.out.println("è¯·è¾“å…¥å‡ºç”Ÿæ—¥æœŸï¼š");
+		System.out.println("ÇëÊäÈë³öÉúÈÕÆÚ£º");
 		String birDate = sc.nextLine();
-		System.out.println("è¯·è¾“å…¥æ€§åˆ«ï¼Œfalseä»£è¡¨å¥³ï¼Œtrueä»£è¡¨ç”·ï¼š");
+		System.out.println("ÇëÊäÈëĞÔ±ğ£¬false´ú±íÅ®£¬true´ú±íÄĞ£º");
 		boolean gender = sc.nextBoolean();
-		//åˆ›å»ºå­¦ç”Ÿå¯¹è±¡
+		//´´½¨Ñ§Éú¶ÔÏó
 		Student s = new Student();
 		s.setID(stuId);
 		s.setName(name);
 		s.setBirDate(birDate);
 		s.setGender(gender);
-		//æŠŠå­¦ç”Ÿå¯¹è±¡æ·»åŠ åˆ°é›†åˆ
+		//°ÑÑ§Éú¶ÔÏóÌí¼Óµ½¼¯ºÏ
 		arry.add(s);
-		System.out.println("æ·»åŠ å­¦ç”ŸæˆåŠŸï¼");
+		System.out.println("Ìí¼ÓÑ§Éú³É¹¦£¡");
 		
 	}
-	//åˆ é™¤ç±»
+	//É¾³ıÀà
 	public static void deletestudent(ArrayList<Student> arry) {
 		
 	}
-	//ä¿®æ”¹ç±»
+	//ĞŞ¸ÄÀà
 	public static void changestudent(ArrayList<Student> arry) {
-		
+		Scanner sc= new Scanner(System.in);
+		System.out.print("ÇëÊäÈëÒª¸Ä±äµÄÑ§ºÅ£º");
+		int changeId = sc.nextInt();
+		int index = -1;
+		for(int i=0;i<arry.size();i++) {
+			Student s = arry.get(i);
+			if(s.getID()==changeId) {		
+				index = i;				
+			}
+		}
+		if (index == -1) {
+			System.out.println("ÄúÒª¸Ä±äµÄÑ§Éú²»´æÔÚ£¬ÇëÖØĞÂ²Ù×÷£¡");
+		} else {
+			System.out.println("ÇëÊäÈëĞÂĞÕÃû£º");
+			String name1 = sc.nextLine();
+			String name = sc.nextLine();
+			System.out.println("ÇëÊäÈëĞÂ³öÉúÈÕÆÚ£º");
+			String birDate = sc.nextLine();
+			System.out.println("ÇëÊäÈëĞÂĞÔ±ğ£¬false´ú±íÅ®£¬true´ú±íÄĞ£º");
+			boolean gender = sc.nextBoolean();
+			//´´½¨Ñ§Éú¶ÔÏó
+			Student s = new Student();
+			s.setID(changeId);
+			s.setName(name);
+			s.setBirDate(birDate);
+			s.setGender(gender);
+			//ĞŞ¸ÄÑ§Éú¶ÔÏó
+			arry.set(index,s);
+			System.out.println("ĞŞ¸ÄÑ§Éú³É¹¦£¡£¡£¡");
+		}
 	}
 }
