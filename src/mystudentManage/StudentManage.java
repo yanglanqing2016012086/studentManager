@@ -102,8 +102,7 @@ public class StudentManage {
 
 	//添加类
 	public static void addstudent(ArrayList<Student> arry) {
-		//录入对象
-		Scanner sc= new Scanner(System.in);
+		Scanner sc= new Scanner(System.in); //录入对象
 		int stuId;
 		while(true) {
 			System.out.println("请输入学号：");
@@ -118,7 +117,8 @@ public class StudentManage {
 			}
 			if(flag) {
 				System.out.println("您输入的账号被占用！！！");
-			}else {
+			 }
+                                                else {
 				break;
 			}
 		}
@@ -129,14 +129,12 @@ public class StudentManage {
 		String birDate = sc.nextLine();
 		System.out.println("请输入性别，false代表女，true代表男：");
 		boolean gender = sc.nextBoolean();
-		//创建学生对象
-		Student s = new Student();
+		Student s = new Student(); //创建学生对象
 		s.setID(stuId);
 		s.setName(name);
 		s.setBirDate(birDate);
 		s.setGender(gender);
-		//把学生对象添加到集合
-		arry.add(s);
+		arry.add(s); //把学生对象添加到集合
 		System.out.println("添加学生成功！");
 		
 	}
@@ -153,7 +151,8 @@ public class StudentManage {
 			}			
 			if (index == -1) {
 				System.out.println("你要删除的学生不存在，请重新选择！");
-			} else {
+			}
+                                              else {
 				arry.remove(index);
 				System.out.println("删除学生成功！！");
 			}
@@ -173,7 +172,8 @@ public class StudentManage {
 		}
 		if (index == -1) {
 			System.out.println("您要改变的学生不存在，请重新操作！");
-		} else {
+		} 
+                               else {
 			System.out.println("请输入新姓名：");
 			String name1 = sc.nextLine();
 			String name = sc.nextLine();
@@ -181,14 +181,12 @@ public class StudentManage {
 			String birDate = sc.nextLine();
 			System.out.println("请输入新性别，false代表女，true代表男：");
 			boolean gender = sc.nextBoolean();
-			//创建学生对象
-			Student s = new Student();
+			Student s = new Student(); //创建学生对象
 			s.setID(changeId);
 			s.setName(name);
 			s.setBirDate(birDate);
 			s.setGender(gender);
-			//修改学生对象
-			arry.set(index,s);
+			arry.set(index,s); //修改学生对象
 			System.out.println("修改学生成功！！！");
 		}
 	}
