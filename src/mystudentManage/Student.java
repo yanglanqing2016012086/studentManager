@@ -6,9 +6,7 @@ public class Student {
     private String birDate;
     private boolean gender;
     
-    public Student() {
- 
-    }
+    public Student() { }
 
 	public int getID() {
 		return ID;
@@ -18,7 +16,7 @@ public class Student {
 		ID = iD;
 	}
 
-	public String getName() {
+	public String getName(){
 		return name;
 	}
 
